@@ -1,0 +1,25 @@
+{
+  "name": "add-open-files-to-agent-context",
+  "displayName": "Add Open Files to Agent Context",
+  "description": "Opens a new Agent chat session with all open editor tabs attached as context.",
+  "version": "0.0.1",
+  "publisher": "cb109",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "addOpenFilesToAgentContext.run",
+        "title": "Add open files to Agent Context"
+      }
+    ]
+  }
+}
