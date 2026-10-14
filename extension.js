@@ -1,9 +1,15 @@
 const vscode = require('vscode');
 
 function getOpenTabUris() {
+	const skipPinned = vscode.workspace
+		.getConfiguration('addOpenFilesToAgentContext')
+		.get('skipPinnedTabs', true);
 	const uris = new Map();
 	for (const group of vscode.window.tabGroups.all) {
 		for (const tab of group.tabs) {
+			if (skipPinned && tab.isPinned) {
+				continue;
+			}
 			const input = tab.input;
 			let uri;
 			if (input instanceof vscode.TabInputText

@@ -20,6 +20,16 @@
         "command": "addOpenFilesToAgentContext.run",
         "title": "Add open files to Agent Context"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Add Open Files to Agent Context",
+      "properties": {
+        "addOpenFilesToAgentContext.skipPinnedTabs": {
+          "type": "boolean",
+          "default": true,
+          "description": "Skip pinned editor tabs when adding open files to the Agent context."
+        }
+      }
+    }
   }
 }
